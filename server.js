@@ -4,12 +4,16 @@
 var express = require('express');
 var app = express();
 
+//body parser
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 //Routes
 //Log data on post requests
 app.post('/', function(req, res) {
-    //log data from post request body json
-    let email = req.body.email;
-    console.log(email);
+    //Log data
+    console.log(req.body);
     //Send a response
     res.send('Data received');
 });
