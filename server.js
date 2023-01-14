@@ -16,7 +16,9 @@ app.get('/', function(req, res){
     res.send('Just a normal web page....');
 });
 
+var port = process.env.PORT || 8080;
+
 //Start server
-app.listen(3000, function(){
+app.listen(port, function(){
     console.log('Server running on port 3000');
 });
