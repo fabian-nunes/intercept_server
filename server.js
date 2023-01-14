@@ -7,8 +7,9 @@ var app = express();
 //Routes
 //Log data on post requests
 app.post('/', function(req, res) {
-    //Save data to a file
-    console.log(req.body);
+    //log data from post request body json
+    let email = req.body.email;
+    console.log(email);
     //Send a response
     res.send('Data received');
 });
